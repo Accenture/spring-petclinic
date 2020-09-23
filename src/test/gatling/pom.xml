@@ -12,6 +12,31 @@
     	<gatling-plugin.version>2.0.0</gatling-plugin.version>
 	</properties>
 
+    <!-- resolving the issue of maven repository access through SSL-->
+	<repositories>
+		<repository>
+			<snapshots>
+				<enabled>false</enabled>
+			</snapshots>
+			<id>central</id>
+			<name>Central Repository</name>
+			<url>https://repo.maven.apache.org/maven2</url>
+		</repository>
+	</repositories>
+	<pluginRepositories>
+		<pluginRepository>
+			<releases>
+				<updatePolicy>never</updatePolicy>
+			</releases>
+			<snapshots>
+				<enabled>false</enabled>
+			</snapshots>
+			<id>central</id>
+			<name>Central Repository</name>
+			<url>https://repo.maven.apache.org/maven2</url>
+		</pluginRepository>
+	</pluginRepositories>
+
 	<dependencies>
 		<dependency>
 			<groupId>io.gatling.highcharts</groupId>
